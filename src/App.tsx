@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button"
+import "./index.css"
+import { ThemeProvider } from "./components/theme-provider"
+import { ModeToggle } from "./components/mode-toggle"
 
 function App() {
   return (
-    <>
-      <Button>Hello ShadCN</Button>
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ModeToggle />
+    </ThemeProvider>
   )
 }
 
